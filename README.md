@@ -12,7 +12,7 @@ Certifique-se de seguir esta ordem de execução dos códigos para construir o b
 
 3. **DML (Data Manipulation Language para a Lanchonete)**: Aqui, você trabalhará com operações de inserção, atualização e exclusão de dados relacionados à gestão da lanchonete dentro da LanHouse. Novamente, crie arquivos SQL dedicados para essas tarefas.
    
-4. **FUNCTION**: Neste arquivo você deverá executar primeiramente a criação da função e depois altere a tabela NotaFiscal, com o ALTER TABLE. 
+4. **FUNCTION**: Neste arquivo você deverá executar primeiramente a criação da função e depois alterar a tabela NotaFiscal, com o ALTER TABLE. 
 
 ## Requisitos
 
