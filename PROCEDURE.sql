@@ -1,26 +1,24 @@
--- Stored procedure para listar registros de uso de uma m·quina
-CREATE PROCEDURE ListarRegistrosDeUsoDaMaquina
-    @IDMaquina INT
+--Cria√ß√£o Procedure para atualizar o ValorTotal da comanda
+CREATE PROCEDURE AtualizarValorTotalComanda
 AS
 BEGIN
-    SELECT
-        R.IDRegistroUso,
-        R.IDCliente,
-        C.Nome AS NomeCliente,
-        R.DataHoraInicio,
-        R.DataHoraFim,
-        R.ValorCobrado
-    FROM RegistroDeUso R
-    INNER JOIN Cliente C ON R.IDCliente = C.IDCliente
-    WHERE R.IDMaquina = @IDMaquina
-    ORDER BY R.DataHoraInicio;
-    IF @@ROWCOUNT = 0
-    BEGIN
-        PRINT 'Nenhum registro de uso encontrado para a m·quina com ID ' + CAST(@IDMaquina AS VARCHAR);
-    END
+    UPDATE c
+    SET ValorTotal = (SELECT SUM(ValorTotalItem) FROM ItemComanda WHERE IDCliente = c.IDCliente)
+    FROM Comanda c
+    WHERE c.IDCliente IN (SELECT IDCliente FROM ItemComanda);
 END;
-
--- Sintaxe para executar a stored procedure
-EXECUTE ListarRegistrosDeUsoDaMaquina 1; 
-
-SELECT * FROM RegistroDeUso
+--Trigger para chamar a procedure automaticamente
+CREATE TRIGGER AtualizarComandaValorTotal
+ON ItemComanda
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @IDCliente INT, @DataVenda DATE;
+    SELECT @IDCliente = IDCliente, @DataVenda = DataVenda
+    FROM inserted;
+    EXEC AtualizarValorTotalComanda;
+END;
+--Teste
+SELECT * FROM Comanda
+INSERT INTO ItemComanda VALUES(1,1,1,'2023-11-07',2.5)
+SELECT * FROM Comanda
