@@ -4,11 +4,12 @@ AFTER INSERT
 AS
 BEGIN
     UPDATE Lanchonete
-    SET Quantidade = Quantidade - (SELECT Quantidade FROM inserted)
-    WHERE Lanchonete.IDItemLanchonete = (SELECT IDItemLanchonete FROM inserted);
+    SET Lanchonete.Quantidade = Lanchonete.Quantidade - i.Quantidade
+    FROM Lanchonete
+    INNER JOIN inserted AS i ON Lanchonete.IDItemLanchonete = i.IDItemLanchonete;
 END;
 
---DEMONSTRA«√O:
+--DEMONSTRA√á√ÉO:
 SELECT * FROM Lanchonete;
 
 INSERT INTO Comanda (IDCliente, IDItemLanchonete, Quantidade)
