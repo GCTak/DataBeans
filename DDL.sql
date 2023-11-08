@@ -72,6 +72,14 @@ CREATE TABLE ServicoAdicional (
     FOREIGN KEY (IDMaquina) REFERENCES Maquina(IDMaquina)
 );
 
+CREATE TABLE DetalheServicoAdicional (
+	IDDetalhe INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	IDServicoAdicional INT NOT NULL,
+	Quantidade INT NOT NULL,
+	ValorTotal DECIMAL (10,2),
+	FOREIGN KEY (IDServicoAdicional) REFERENCES ServicoAdicional(IDServicoAdicional)
+);
+
 CREATE TABLE Comanda (
     IDComanda INT IDENTITY(1,1) PRIMARY KEY,
     IDCliente INT NOT NULL,
@@ -98,7 +106,6 @@ CREATE TABLE NotaFiscal (
     TempoUso TIME,
     ValorUso DECIMAL(10,2),
     IDServicoAdicional INT,
-    QuantidadeServicoAdicional INT,
     ValorTotalServicoAdicional DECIMAL(10,2),
     IDComanda INT,
     ValorTotalComanda DECIMAL(10,2),
