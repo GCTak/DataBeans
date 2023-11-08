@@ -75,35 +75,37 @@ CREATE TABLE ServicoAdicional (
 CREATE TABLE Comanda (
     IDComanda INT IDENTITY(1,1) PRIMARY KEY,
     IDCliente INT NOT NULL,
-	DataVenda DATE NOT NULL,
-	ValorTotal DECIMAL(10,2) NOT NULL,
+    DataVenda DATE NOT NULL,
+    ValorTotal DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
 );
 
 CREATE TABLE ItemComanda (
     IDItemComanda INT IDENTITY(1,1) PRIMARY KEY,
-	IDCliente INT NOT NULL,
-	IDItemLanchonete INT NOT NULL,
+    IDCliente INT NOT NULL,
+    IDItemLanchonete INT NOT NULL,
     Quantidade INT NOT NULL,
-	DataVenda DATE NOT NULL,
+    DataVenda DATE NOT NULL,
     ValorTotalItem DECIMAL(10, 2),
-	FOREIGN KEY (IDItemLanchonete) REFERENCES Lanchonete (IDItemLanchonete),
-	FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
+    FOREIGN KEY (IDItemLanchonete) REFERENCES Lanchonete (IDItemLanchonete),
+    FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
 );
 CREATE TABLE NotaFiscal (
     IDNotaFiscal INT IDENTITY(1,1) PRIMARY KEY,
     DataVenda DATE NOT NULL,
     IDCliente INT NOT NULL,
-    IDRegistroUso INT NULL,
-    IDServicoAdicional INT NULL,
-    IDComanda INT NULL,
-    IDFuncionario INT NULL,
+    IDRegistroUso INT ,
+    IDServicoAdicional INT,
+    ValorTotalServicoAdicional DECIMAL(10,2),
+    IDComanda INT,
+    ValorTotalComanda DECIMAL(10,2),
+    IDFuncionario INT NOT NULL,
     Desconto DECIMAL(5, 2) NULL,
-	FormaPagamento VARCHAR(50),
+    FormaPagamento VARCHAR(50),
     ValorTotal DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
     FOREIGN KEY (IDRegistroUso) REFERENCES RegistroDeUso(IDRegistroUso),
     FOREIGN KEY (IDServicoAdicional) REFERENCES ServicoAdicional(IDServicoAdicional),
     FOREIGN KEY (IDComanda) REFERENCES Comanda(IDComanda),
-	FOREIGN KEY (IDFuncionario) REFERENCES Funcionario(IDFuncionario)
+    FOREIGN KEY (IDFuncionario) REFERENCES Funcionario(IDFuncionario)
 );
