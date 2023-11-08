@@ -73,11 +73,13 @@ CREATE TABLE ServicoAdicional (
 );
 
 CREATE TABLE DetalheServicoAdicional (
-	IDDetalhe INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
-	IDServicoAdicional INT NOT NULL,
-	Quantidade INT NOT NULL,
-	ValorTotal DECIMAL (10,2),
-	FOREIGN KEY (IDServicoAdicional) REFERENCES ServicoAdicional(IDServicoAdicional)
+    IDDetalhe INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    IDCliente INT NOT NULL,
+    IDServicoAdicional INT NOT NULL,
+    Quantidade INT NOT NULL,
+    ValorTotal DECIMAL (10,2),
+    FOREIGN KEY (IDServicoAdicional) REFERENCES ServicoAdicional(IDServicoAdicional),
+    FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
 );
 
 CREATE TABLE Comanda (
