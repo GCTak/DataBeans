@@ -78,6 +78,7 @@ CREATE TABLE DetalheServicoAdicional (
     IDServicoAdicional INT NOT NULL,
     Quantidade INT NOT NULL,
     ValorTotal DECIMAL (10,2),
+    DataPrestacao DATE NOT NULL,
     FOREIGN KEY (IDServicoAdicional) REFERENCES ServicoAdicional(IDServicoAdicional),
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
 );
