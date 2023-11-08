@@ -1,5 +1,7 @@
+--Criação do Banco de Dados
 CREATE DATABASE DataBeans;
 
+--Criação das tabelas
 CREATE TABLE Cliente (
     IDCliente INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(150) NOT NULL,
@@ -8,6 +10,7 @@ CREATE TABLE Cliente (
     Telefone CHAR(11) NOT NULL,
     Email VARCHAR(100)
 );
+
 CREATE TABLE Funcionario (
     IDFuncionario INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(150),
@@ -18,6 +21,7 @@ CREATE TABLE Funcionario (
     Telefone CHAR(11),
     Email VARCHAR(100)
 );
+
 CREATE TABLE Maquina (
     IDMaquina INT IDENTITY(1,1) PRIMARY KEY,
     NumeroSerie CHAR(7),
@@ -86,21 +90,26 @@ CREATE TABLE DetalheServicoAdicional (
 CREATE TABLE Comanda (
     IDComanda INT IDENTITY(1,1) PRIMARY KEY,
     IDCliente INT NOT NULL,
+    IDFuncionario INT NOT NULL,
     DataVenda DATE NOT NULL,
     ValorTotal DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
+    FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
+    FOREIGN KEY (IDFuncionario) REFERENCES Funcionario(IDFuncionario)
 );
 
 CREATE TABLE ItemComanda (
     IDItemComanda INT IDENTITY(1,1) PRIMARY KEY,
     IDCliente INT NOT NULL,
     IDItemLanchonete INT NOT NULL,
+    IDFuncionario INT NOT NULL,
     Quantidade INT NOT NULL,
     DataVenda DATE NOT NULL,
     ValorTotalItem DECIMAL(10, 2),
     FOREIGN KEY (IDItemLanchonete) REFERENCES Lanchonete (IDItemLanchonete),
-    FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
+    FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
+    FOREIGN KEY (IDFuncionario) REFERENCES Funcionario(IDFuncionario)
 );
+
 CREATE TABLE NotaFiscal (
     IDNotaFiscal INT IDENTITY(1,1) PRIMARY KEY,
     DataVenda DATE NOT NULL,
