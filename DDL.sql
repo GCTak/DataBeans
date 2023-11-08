@@ -1,5 +1,4 @@
-
---CREATE DATABASE DataBeans;
+CREATE DATABASE DataBeans;
 
 CREATE TABLE Cliente (
     IDCliente INT IDENTITY(1,1) PRIMARY KEY,
@@ -76,12 +75,21 @@ CREATE TABLE ServicoAdicional (
 CREATE TABLE Comanda (
     IDComanda INT IDENTITY(1,1) PRIMARY KEY,
     IDCliente INT NOT NULL,
-    IDItemLanchonete INT NOT NULL,
-    Quantidade INT NOT NULL,
-    FOREIGN KEY (IDItemLanchonete) REFERENCES Lanchonete(IDItemLanchonete),
+	DataVenda DATE NOT NULL,
+	ValorTotal DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
 );
 
+CREATE TABLE ItemComanda (
+    IDItemComanda INT IDENTITY(1,1) PRIMARY KEY,
+	IDCliente INT NOT NULL,
+	IDItemLanchonete INT NOT NULL,
+    Quantidade INT NOT NULL,
+	DataVenda DATE NOT NULL,
+    ValorTotalItem DECIMAL(10, 2),
+	FOREIGN KEY (IDItemLanchonete) REFERENCES Lanchonete (IDItemLanchonete),
+	FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
+);
 CREATE TABLE NotaFiscal (
     IDNotaFiscal INT IDENTITY(1,1) PRIMARY KEY,
     DataVenda DATE NOT NULL,
