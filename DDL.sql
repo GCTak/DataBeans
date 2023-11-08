@@ -95,6 +95,7 @@ CREATE TABLE NotaFiscal (
     DataVenda DATE NOT NULL,
     IDCliente INT NOT NULL,
     IDRegistroUso INT ,
+    ValorUso DECIMAL(10,2),
     IDServicoAdicional INT,
     ValorTotalServicoAdicional DECIMAL(10,2),
     IDComanda INT,
