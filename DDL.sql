@@ -14,7 +14,9 @@ CREATE TABLE Maquina (
     NumeroSerie CHAR(7),
     Estado VARCHAR(30),
     Tipo VARCHAR(30),
-    Especificacoes VARCHAR(1000)
+    Especificacoes VARCHAR(1000),
+    FuncionarioResponsavel INT NOT NULL,
+    FOREIGN KEY (FuncionarioResponsavel)REFERENCES Funcionario (IDFuncionario)
 );
 
 CREATE TABLE Funcionario (
