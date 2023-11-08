@@ -8,17 +8,6 @@ CREATE TABLE Cliente (
     Telefone CHAR(11) NOT NULL,
     Email VARCHAR(100)
 );
-
-CREATE TABLE Maquina (
-    IDMaquina INT IDENTITY(1,1) PRIMARY KEY,
-    NumeroSerie CHAR(7),
-    Estado VARCHAR(30),
-    Tipo VARCHAR(30),
-    Especificacoes VARCHAR(1000),
-    FuncionarioResponsavel INT NOT NULL,
-    FOREIGN KEY (FuncionarioResponsavel)REFERENCES Funcionario (IDFuncionario)
-);
-
 CREATE TABLE Funcionario (
     IDFuncionario INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(150),
@@ -28,6 +17,15 @@ CREATE TABLE Funcionario (
     Endereco VARCHAR(300),
     Telefone CHAR(11),
     Email VARCHAR(100)
+);
+CREATE TABLE Maquina (
+    IDMaquina INT IDENTITY(1,1) PRIMARY KEY,
+    NumeroSerie CHAR(7),
+    Estado VARCHAR(30),
+    Tipo VARCHAR(30),
+    Especificacoes VARCHAR(1000),
+    FuncionarioResponsavel INT NOT NULL,
+    FOREIGN KEY (FuncionarioResponsavel)REFERENCES Funcionario (IDFuncionario)
 );
 
 CREATE TABLE Reserva (
