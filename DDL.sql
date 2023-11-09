@@ -2,26 +2,6 @@
 CREATE DATABASE DataBeans;
 
 --Criação das tabelas
-CREATE TABLE Cliente (
-    IDCliente INT IDENTITY(1,1) PRIMARY KEY,
-    Nome VARCHAR(150) NOT NULL,
-    DataNascimento DATE,
-    Endereco VARCHAR(300),
-    Telefone CHAR(11) NOT NULL,
-    Email VARCHAR(100)
-);
-
-CREATE TABLE Funcionario (
-    IDFuncionario INT IDENTITY(1,1) PRIMARY KEY,
-    Nome VARCHAR(150),
-    Cargo VARCHAR(50),
-    DataContratacao DATE,
-    Salario MONEY,
-    Endereco VARCHAR(300),
-    Telefone CHAR(11),
-    Email VARCHAR(100)
-);
-
 CREATE TABLE Maquina (
     IDMaquina INT IDENTITY(1,1) PRIMARY KEY,
     NumeroSerie CHAR(7),
