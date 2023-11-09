@@ -54,6 +54,7 @@ INSERT INTO Cliente VALUES
 	(18),
 	(19),
 	(20);
+
 INSERT INTO Funcionario (Cargo, DataContratacao, Salario, IDFuncionario) VALUES
 	('Atendente de Caixa', '2022-06-14', 1500, 21),
 	('Gerente', '2023-01-23', 1700, 22),
@@ -109,6 +110,7 @@ INSERT INTO Lanchonete VALUES
 	('Pirulito Bigbig', 0.35,50),
 	('Chiclete Bubbaloo', 0.35,50),
 	('Pipoca Microondas Yoki', 5, 50);
+
 INSERT INTO Maquina VALUES 
 	('B07YSV1','Reservado', 'Desktop', 'Intel Core i5 8GB 240GB SSD Total',25),
 	('B0BS42M', 'Em manutenção','Desktop', 'Intel Core i7 16GB SSD 480GB',25),
