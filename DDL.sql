@@ -37,6 +37,7 @@ CREATE TABLE Reserva (
     IDCliente INT NOT NULL,
     IDMaquina INT NULL,
     Horario DATETIME2 NOT NULL,
+	TempoDeReserva TIME NOT NULL,
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
     FOREIGN KEY (IDMaquina) REFERENCES Maquina(IDMaquina)
 );
