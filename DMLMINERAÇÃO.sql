@@ -31,7 +31,21 @@ INSERT INTO Pessoa VALUES
 	('Beatriz Gomez','1987-01-14','Rua Vicente Guimarães Matos, 30','34930848936','Beatriz@DataBeans.com','Funcionario'),
 	('Sophia Martinez', '1991-08-03','Rua Engenheiro Diniz,471','34926676435','Sophia@DataBeans.com','Funcionario'),
 	('Tiago Ramos', '1984-05-28','Rua Olegário Maciel, 373 - Edifício Place Vendome','34932606215','Tiago@DataBeans.com','Funcionario'),
-	('Clara Mendes','1997-09-17','Rua Gardênia, 64','34920195011','Clara@DataBeans.com','Funcionario');
+	('Clara Mendes','1997-09-17','Rua Gardênia, 64','34920195011','Clara@DataBeans.com','Funcionario'),
+	('Fernanda Oliveira', '1991-08-15', 'Avenida Rondon Pacheco, 123', '34998876543', 'fernanda.oliveira@gmail.com', 'Cliente'),
+        ('Rafael Lima', '1993-05-22', 'Rua José Alves, 456', '34997771234', 'rafael.lima@hotmail.com', 'Cliente'),
+        ('Patrícia Santos', '1988-12-10', 'Rua das Acácias, 789', '34996661234', 'patricia.santos@gmail.com', 'Cliente'),
+        ('Lucas Silva', '1995-09-28', 'Avenida João Naves de Ávila, 567', '34998882345', 'lucas.silva@yahoo.com.br', 'Cliente'),
+        ('Mariana Costa', '1985-04-05', 'Rua das Orquídeas, 890', '34995554432', 'mariana.costa@hotmail.com', 'Cliente'),
+        ('Thiago Oliveira', '1992-03-20', 'Avenida Segismundo Pereira, 321', '34994441122', 'thiago.oliveira@gmail.com', 'Cliente'),
+        ('Leticia Almeida', '1994-11-15', 'Rua das Rosas, 654', '34991112233', 'leticia.almeida@gmail.com', 'Cliente'),
+        ('Anderson Santos', '1980-07-03', 'Avenida Anselmo Alves dos Santos, 987', '34993332211', 'anderson.santos@hotmail.com', 'Cliente'),
+        ('Gabriel Lima', '1997-02-18', 'Rua dos Ipês, 234', '34995557788', 'gabriel.lima@yahoo.com.br', 'Cliente'),
+        ('Fernanda Oliveira', '1999-06-01', 'Avenida Rondon Pacheco, 123', '34998876543', 'fernanda.oliveira@gmail.com', 'Cliente'),
+	('Vinícius Silva', '1987-01-25', 'Rua Uberabinha, 456', '34997770001', 'vinicius.silva@DataBeans.com', 'Funcionario'),
+        ('Camila Santos', '1983-09-12', 'Avenida Getúlio Vargas, 789', '34996661111', 'camila.santos@DataBeans.com', 'Funcionario'),
+        ('Roberto Oliveira', '1990-06-28', 'Rua dos Gerânios, 321', '34998882222', 'roberto.oliveira@DataBeans.com', 'Funcionario'),
+        ('Ana Costa', '1985-03-18', 'Avenida JK, 987', '34993332222', 'ana.costa@DataBeans.com', 'Funcionario');
 
 INSERT INTO Cliente VALUES
 	(1),
@@ -53,7 +67,17 @@ INSERT INTO Cliente VALUES
 	(17),
 	(18),
 	(19),
-	(20);
+	(20),
+	(34),
+	(35),
+	(36),
+	(37),
+	(38),
+	(39),
+	(40),
+	(41), 
+	(42),
+	(43);
 
 INSERT INTO Funcionario (Cargo, DataContratacao, Salario, IDFuncionario) VALUES
 	('Atendente de Caixa', '2022-06-14', 1500, 21),
@@ -68,7 +92,11 @@ INSERT INTO Funcionario (Cargo, DataContratacao, Salario, IDFuncionario) VALUES
 	('Barista', '2023-02-19', 1500, 30),
 	('Barista', '2022-09-15', 1500, 31),
 	('Limpeza e Manutenção', '2023-06-26', 1100, 32),
-	('Limpeza e Manutenção', '2022-10-14', 1100, 33);
+	('Limpeza e Manutenção', '2022-10-14', 1100, 33),
+	('Barista', '2022-11-09', 1500, 44),
+	('Barista', '2023-02-15', 1500, 45),
+	('Barista', '2023-06-22', 1500, 46),
+	('Barista', '2023-10-30', 1500, 47);
 
 INSERT INTO Lanchonete VALUES 
 	('Enrolado de salsicha',2.50,15),
@@ -123,11 +151,61 @@ INSERT INTO Maquina VALUES
 	('B09YFP8', 'Em manutenção', 'Notebook', 'ACER Notebook Nitro 5, 8GB 512GB SSD, (NVIDIA RTX 3050), Windows 11, 15.6" LED FHD IPS (1920 x 1080)',29),
 	('B09GQ31', 'Disponível', 'Notebook', 'Notebook Avell - Geforce RTX 3050, i5 11400H , 8GB, SSD NVME 250GB, Windows 10 HSL -15"',29),
 	('B224','Disponível', 'Impressora', 'Impressora Xerox Multifuncional a laser - Monocromática',30),
-	('C7120', 'Disponível','Impressora', 'Impressora a laser Xerox Versalink - Colorida',30);
+	('C7120', 'Disponível','Impressora', 'Impressora a laser Xerox Versalink - Colorida',30),
+	('B0X1L3G', 'Disponível', 'Desktop', 'Intel Core i5 16GB 1TB HDD', 44),
+        ('B0P5C1R', 'Em uso', 'Notebook', 'Lenovo Ideapad 8GB 512GB SSD', 44),
+        ('B0W3R2G', 'Reservado', 'Desktop', 'AMD Ryzen 5 32GB 500GB SSD', 45),
+        ('B1G1M8L', 'Em manutenção', 'Impressora', 'HP LaserJet Pro M404dw', 45),
+	('B0D3M0B', 'Disponível', 'Notebook', 'Dell Inspiron 14 8GB 256GB SSD', 46),
+        ('B0T9X2Z', 'Em uso', 'Desktop', 'AMD Ryzen 7 64GB 1TB SSD NVIDIA RTX 3080', 46),
+        ('B1G4M3R', 'Reservado', 'Desktop', 'Intel Core i9 32GB 2TB HDD', 47),
+        ('B0X7S0L', 'Em manutenção', 'Notebook', 'HP Pavilion 16GB 512GB SSD', 47);
 
 INSERT INTO Reserva VALUES
 	(5, 1,'2023-11-08 15:00','01:00:00'),
-	(1, 7,'2023-11-10 12:00','01:00:00');
+	(1, 7,'2023-11-10 12:00','01:00:00'),
+	(8, 1, '2023-11-15 14:00', '02:00:00'),
+        (3, 4, '2023-11-20 10:00', '03:00:00');
+
+INSERT INTO Manutencao VALUES
+	(2,'2023-11-02','Troca do SSD', 0),
+	(5,'2023-10-30', 'Formatação',0),
+	(9,'2023-11-05', 'Troca Memória RAM',0),
+	(16, '2023-11-10', 'Limpeza interna', 0),
+        (20, '2023-11-12', 'Substituição do toner', 1);
+
+INSERT INTO ServicoAdicional VALUES
+	('Cópia Preto-Branco', 0.5,11),
+	('Cópia Colorida', 1,12),
+	('Impressão A4 Preto-Branco',0.5,11), 
+	('Impressão A4 Colorida',1, 12), 
+	('Digitalização documentos',2, 11),
+	('Digitalização documentos',2, 12),
+	('Corujão', 5, 1),
+	('Corujão', 5, 2),
+	('Corujão', 5, 3),
+	('Corujão', 5, 4),
+	('Corujão', 5, 5),
+        ('Cópia Colorida A4', 1.5, 16),
+        ('Digitalização de Documentos', 2, 16);
+
+INSERT INTO RegistroDeUso VALUES 
+	(9,3,'2023-11-06 00:00', '2023-11-07 05:00', 25), 
+	(4,4,'2023-11-06 00:00', '2023-11-07 05:00', 25),
+        (2, 3, '2023-11-08 08:00', '2023-11-08 12:00', 20.5),
+        (7, 2, '2023-11-09 09:00', '2023-11-09 17:00', 35.0);
+
+INSERT INTO Comanda VALUES 
+	(1,27,'2023-11-07', 0),
+	(1,27,'2023-11-10', 0),
+	(4,26,'2023-11-06',0),
+	(5,25,'2023-11-08',0),
+	(9,26,'2023-11-06',0),
+	(13,31,'2023-11-03',0),
+	(17,31,'2023-10-30',0),
+	(20,31,'2023-10-20',0),
+	(8, 21, '2023-11-15', 0),
+        (3, 22, '2023-11-20', 0);
 
 INSERT INTO ItemComanda VALUES 
 	(1,11,27,1,'2023-11-10', 6.5),
@@ -151,35 +229,6 @@ INSERT INTO ItemComanda VALUES
 	(4,36,26,1,'2023-11-06',17.6),
 	(4,2,26,1,'2023-11-06',2.5),
 	(4,23,26,1,'2023-11-06',1.5),
-	(4,36,26,1,'2023-11-06',17.6);
-
-INSERT INTO Manutencao VALUES
-	(2,'2023-11-02','Troca do SSD', 0),
-	(5,'2023-10-30', 'Formatação',0),
-	(9,'2023-11-05', 'Troca Memória RAM',0);
-
-INSERT INTO ServicoAdicional VALUES
-	('Cópia Preto-Branco', 0.5,11),
-	('Cópia Colorida', 1,12),
-	('Impressão A4 Preto-Branco',0.5,11), 
-	('Impressão A4 Colorida',1, 12), 
-	('Digitalização documentos',2, 11),
-	('Digitalização documentos',2, 12),
-	('Corujão', 5, 1),
-	('Corujão', 5, 2),
-	('Corujão', 5, 3),
-	('Corujão', 5, 4),
-	('Corujão', 5, 5);
-
-INSERT INTO RegistroDeUso VALUES 
-	(9,3,'2023-11-06 00:00', '2023-11-07 05:00', 25), 
-	(4,4,'2023-11-06 00:00', '2023-11-07 05:00', 25);
-
-INSERT INTO Comanda VALUES 
-	(1,27,'2023-11-10', 10.50),
-	(4,26,'2023-11-06',39.20),
-	(5,25,'2023-11-08',5.60),
-	(9,26,'2023-11-06',26.20),
-	(13,31,'2023-11-03',2.70),
-	(17,31,'2023-10-30',13.95),
-	(20,31,'2023-10-20',9.85)
+	(4,36,26,1,'2023-11-06',17.6),
+        (8, 27, 21, 2, '2023-11-15', 13.0),
+        (3, 14, 22, 1, '2023-11-20', 8.0);
