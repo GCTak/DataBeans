@@ -1,14 +1,9 @@
---Transação  - Commit
+--TransaÃ§Ã£o  - Commit
 BEGIN TRANSACTION;
-
-	INSERT INTO Cliente VALUES('Lucas Eduardo', '2002-11-15', 'Rua Cleantro Vieira, 466', '34999999999', 'luquinhas420@hotmail.com');
-
+	INSERT INTO Pessoa VALUES('Lucas Eduardo', '2002-11-15', 'Rua Cleantro Vieira, 466', '34999999999', 'luquinhas420@hotmail.com');
 COMMIT;
 
---Transação - Rollback
-
+--TransaÃ§Ã£o - Rollback
 BEGIN TRANSACTION;
-
-	INSERT INTO Reserva VALUES (6, 1, '18:00');
-
+	INSERT INTO Reserva VALUES (6, 1, '2023-11-11 18:00','01:00:00');
 ROLLBACK
