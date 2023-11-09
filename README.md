@@ -12,7 +12,8 @@ Certifique-se de seguir esta ordem de execução dos códigos para construir o b
 
 ## Ordem de Execução dos Códigos - 2º Momento
 
-1. **HERANÇA**: Nesta etapa, você irá criar a estrutura de herança para modelar diferentes tipos de entidades no seu banco de dados. A herança é uma técnica de modelagem de dados que permite que entidades compartilhem características comuns, enquanto também possuem características específicas.
+1. **CREATE DATABASE**: Primeiro você irá criar o banco de dados, ou seja, somente executar a segunda linha do arquivo DDL.sql.
+2. **HERANÇA**: Depois, você irá criar a estrutura de herança para modelar diferentes tipos de entidades no seu banco de dados. A herança é uma técnica de modelagem de dados que permite que entidades compartilhem características comuns, enquanto também possuem características específicas.
 
    - **Tabela Base (Pessoa)**: É criada uma tabela base chamada "Pessoa", que contém as características comuns a todas as entidades, como nome, data de nascimento, endereço, etc.
 
@@ -20,11 +21,11 @@ Certifique-se de seguir esta ordem de execução dos códigos para construir o b
 
    - Isso permite que você compartilhe dados comuns, como nome e endereço, entre Cliente e Funcionário, ao mesmo tempo em que mantém características específicas, como "Cargo" para Funcionário.
 
-2. **DDL(Data Definition Language)**: Após a criação da estrutura de herança, você pode prosseguir com a criação das demais tabelas do banco de dados. Uma vez que essas tabelas podem agora fazer referência às tabelas Cliente e Funcionário.
+3. **DDL(Data Definition Language)**: Após a criação da estrutura de herança, você pode prosseguir com a criação das demais tabelas do banco de dados. Uma vez que essas tabelas podem agora fazer referência às tabelas Cliente e Funcionário.
 
-3. **DMLMINERAÇÃO (DataManipulation Language**: Executando esse código você preencherá o banco de dados com dados fícticios.
+4. **DMLMINERAÇÃO (DataManipulation Language**: Executando esse código você preencherá o banco de dados com dados fícticios.
 
-4. **PROCEDURE**: Neste arquivo constam duas programações a PROCEDURE em si e a TRIGGER, execute-as separadamente.
+5. **PROCEDURE**: Neste arquivo constam duas programações a PROCEDURE em si e a TRIGGER, execute-as separadamente.
    
 
 Ao seguir esta ordem de execução, você garantirá que as relações entre as tabelas reflitam a herança corretamente e facilitem a gestão dos dados de Clientes e Funcionários.
