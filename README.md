@@ -24,11 +24,9 @@ Certifique-se de seguir esta ordem de execução dos códigos para construir o b
 
 3. **DDL(Data Definition Language)**: Após a criação da estrutura de herança, você pode prosseguir com a criação das demais tabelas do banco de dados. Uma vez que essas tabelas podem agora fazer referência às tabelas Cliente e Funcionário.
 
-4. **DMLMINERAÇÃO (DataManipulation Language**: Executando esse código você preencherá o banco de dados com dados fícticios.
+4. **DML2MOMENTO(DataManipulation Language**: Executando esse código você preencherá o banco de dados com dados fícticios.
 
 5. **PROCEDURE**: Neste arquivo constam duas programações a PROCEDURE em si e a TRIGGER, execute-as separadamente.
-
-6. **DMLMINERACAO**: Para a execução da mineração de dados, execute esse script.
 
 **OBSERVAÇÃO**
    Caso prefira pular os passos 2 e 3 execute o  arquivo DDLCOMPLETO.
