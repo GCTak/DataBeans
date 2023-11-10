@@ -6,9 +6,9 @@ Este projeto é parte da disciplina de Banco de Dados 2 do curso de Engenharia d
 
 Certifique-se de seguir esta ordem de execução dos códigos para construir o banco de dados:
 
-2. **DMLWHILE (Data Manipulation Language para a LanHouse)**: Esta etapa se concentra em inserir, atualizar e excluir dados relacionados à gestão da LanHouse. Você pode criar arquivos SQL específicos para essas tarefas.
+1. **DMLWHILE (Data Manipulation Language para a LanHouse)**: Esta etapa se concentra em inserir, atualizar e excluir dados relacionados à gestão da LanHouse. Você pode criar arquivos SQL específicos para essas tarefas.
 
-3. **DML (Data Manipulation Language para a Lanchonete)**: Aqui, você trabalhará com operações de inserção, atualização e exclusão de dados relacionados à gestão da lanchonete dentro da LanHouse. Novamente, crie arquivos SQL dedicados para essas tarefas.
+2. **DML (Data Manipulation Language para a Lanchonete)**: Aqui, você trabalhará com operações de inserção, atualização e exclusão de dados relacionados à gestão da lanchonete dentro da LanHouse. Novamente, crie arquivos SQL dedicados para essas tarefas.
 
 ## Ordem de Execução dos Códigos - 2º Momento
 Ao seguir esta ordem de execução, você garantirá que as relações entre as tabelas reflitam a herança corretamente e facilitem a gestão dos dados de Clientes e Funcionários.
