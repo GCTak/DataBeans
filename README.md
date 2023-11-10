@@ -24,9 +24,9 @@ Ao seguir esta ordem de execução, você garantirá que as relações entre as 
 
 3. **DDL(Data Definition Language)**: Após a criação da estrutura de herança, você pode prosseguir com a criação das demais tabelas do banco de dados. Uma vez que essas tabelas podem agora fazer referência às tabelas Cliente e Funcionário.
 
-4. **DML2MOMENTO(DataManipulation Language**: Executando esse código você preencherá o banco de dados com dados fícticios.
-
-5. **PROCEDURE**: Neste arquivo constam duas programações a PROCEDURE em si e a TRIGGER, execute-as separadamente.
+4. **PROCEDURE**: Neste arquivo constam duas programações a PROCEDURE em si e a TRIGGER, execute-as separadamente.
+   
+5. **DML2MOMENTO(DataManipulation Language**: Executando esse código você preencherá o banco de dados com dados fícticios.
 
 **OBSERVAÇÃO**
    Caso prefira pular os passos 2 e 3 execute o  arquivo DDLCOMPLETO.
