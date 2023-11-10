@@ -10,7 +10,6 @@ CREATE TABLE Pessoa (
 );
 CREATE TABLE Cliente (
     IDCliente INT PRIMARY KEY,
-    -- Colunas específicas de Cliente
     FOREIGN KEY (IDCliente) REFERENCES Pessoa (ID),
     TipoEntidade AS 'Cliente' PERSISTED 
 );
