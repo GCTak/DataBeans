@@ -37,16 +37,3 @@ BEGIN
         END;
     END;
 END;
-
---Necessário executar esse script antes para contar com os que já foram inseridos, depois daqui executa como esperado
-INSERT INTO ItemComanda VALUES (1,37,27,1,'2023-11-07',0.35);
-INSERT INTO ItemComanda VALUES (1,37,27,1,'2023-11-10',0.35); 
-INSERT INTO ItemComanda VALUES (4,37,26,1,'2023-11-06',0.35);
-INSERT INTO ItemComanda VALUES(5,37,25,1,'2023-11-08',0.35);
-INSERT INTO ItemComanda VALUES (9,37,26,1,'2023-11-06',0.35);
-INSERT INTO ItemComanda VALUES(13,37,31,1,'2023-11-03',0.35); 
-INSERT INTO ItemComanda VALUES(17,37,31,1,'2023-10-30',0.35);
-INSERT INTO ItemComanda VALUES(20,37,31,1,'2023-10-20',0.35); 
-INSERT INTO ItemComanda VALUES(8,37,21,1,'2023-11-15',0.35);
-INSERT INTO ItemComanda VALUES(3,37,22,1,'2023-11-20',0.35);
-
