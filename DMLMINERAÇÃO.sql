@@ -1,3 +1,4 @@
+--DADOS FICTÍCIOS
 INSERT INTO Pessoa VALUES
 	('Ana Silva','1990-05-15','Rua Rio Grande do Sul, 240', '34992781547','ana.silva@hotmail.com','Cliente'),
 	('Maria do Santos', '1992-03-10','Avenida Pará, 1355', '34995148254', 'maria.santos@gmail.com','Cliente'),
