@@ -11,6 +11,7 @@ Certifique-se de seguir esta ordem de execução dos códigos para construir o b
 3. **DML (Data Manipulation Language para a Lanchonete)**: Aqui, você trabalhará com operações de inserção, atualização e exclusão de dados relacionados à gestão da lanchonete dentro da LanHouse. Novamente, crie arquivos SQL dedicados para essas tarefas.
 
 ## Ordem de Execução dos Códigos - 2º Momento
+    Ao seguir esta ordem de execução, você garantirá que as relações entre as tabelas reflitam a herança corretamente e facilitem a gestão dos dados de Clientes e Funcionários.
 
 1. **CREATE DATABASE**: Primeiro você irá criar o banco de dados, ou seja, somente executar a segunda linha do arquivo DDL.sql.
 2. **HERANÇA**: Depois, você irá criar a estrutura de herança para modelar diferentes tipos de entidades no seu banco de dados. A herança é uma técnica de modelagem de dados que permite que entidades compartilhem características comuns, enquanto também possuem características específicas.
@@ -26,11 +27,12 @@ Certifique-se de seguir esta ordem de execução dos códigos para construir o b
 4. **DMLMINERAÇÃO (DataManipulation Language**: Executando esse código você preencherá o banco de dados com dados fícticios.
 
 5. **PROCEDURE**: Neste arquivo constam duas programações a PROCEDURE em si e a TRIGGER, execute-as separadamente.
-   
 
-Ao seguir esta ordem de execução, você garantirá que as relações entre as tabelas reflitam a herança corretamente e facilitem a gestão dos dados de Clientes e Funcionários.
+6. **DMLMINERACAO**: Para a execução da mineração de dados, execute esse script.
 
-   
+**OBSERVAÇÃO**
+   Caso prefira pular os passos 2 e 3 execute o  arquivo DDLCOMPLETO.
+
 ## Requisitos
 
 Para executar este projeto, você precisará atender aos seguintes requisitos:
