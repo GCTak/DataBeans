@@ -25,10 +25,3 @@ INSERT INTO Reserva (IDCliente, IDMaquina, Horario)
 VALUES (1, 1, '2023-09-20 10:00:00'),
 	   (3, 3, '2023-09-22 11:15:00'),
 	   (5, 5, '2023-09-24 16:00:00');
-
---Inserção na Tabela Comanda para o uso na função
-INSERT INTO Comanda VALUES (1,5,5);
-
---Inserção na Tabela RegistrodeUso para uso na procedure
-INSERT INTO RegistroDeUso VALUES (4,1,'2023-11-07 00:30', '2023-11-07 02:30', 50)
-
