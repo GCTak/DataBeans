@@ -10,6 +10,9 @@ CREATE TABLE Pessoa (
 
 CREATE TABLE Cliente (
     IDCliente INT NOT NULL PRIMARY KEY,
+    DataCadastro DATE NOT NULL, 
+    StatusConta VARCHAR(15) NOT NULL,
+    HorasUso TIME,
     FOREIGN KEY (IDCliente) REFERENCES Pessoa (ID),
     TipoEntidade AS 'Cliente' PERSISTED 
 );
@@ -38,7 +41,7 @@ CREATE TABLE Reserva (
     IDCliente INT NOT NULL,
     IDMaquina INT NOT NULL,
     Horario DATETIME2 NOT NULL,
-	TempoDeReserva TIME NOT NULL,
+    TempoDeReserva TIME NOT NULL,
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
     FOREIGN KEY (IDMaquina) REFERENCES Maquina(IDMaquina)
 );
@@ -122,12 +125,13 @@ CREATE TABLE NotaFiscal (
     IDServicoAdicional INT,
     ValorTotalServicoAdicional DECIMAL(10,2),
     IDComanda INT,
-	QuantidadeDeItens INT,
+    QuantidadeDeItens INT,
     ValorTotalComanda DECIMAL(10,2),
     IDFuncionario INT NOT NULL,
     Desconto DECIMAL(5, 2),
-	TributosTotaisIncidentes DECIMAL(10,2),
+    TributosTotaisIncidentes DECIMAL(10,2),
     FormaPagamento VARCHAR(50),
+    Troco DECIMAL(10,2),
     ValorTotal DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
     FOREIGN KEY (IDRegistroUso) REFERENCES RegistroDeUso(IDRegistroUso),
