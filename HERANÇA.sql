@@ -1,6 +1,5 @@
---Criação de Herança no banco de dados
 CREATE TABLE Pessoa (
-    ID INT IDENTITY(1,1) PRIMARY KEY,
+    ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Nome VARCHAR(150) NOT NULL,
     DataNascimento DATE,
     Endereco VARCHAR(300),
@@ -8,16 +7,21 @@ CREATE TABLE Pessoa (
     Email VARCHAR(100),
     TipoEntidade VARCHAR(50) 
 );
+
 CREATE TABLE Cliente (
-    IDCliente INT PRIMARY KEY,
+    IDCliente INT NOT NULL PRIMARY KEY,
+	DataCadastro DATE NOT NULL, 
+	StatusConta VARCHAR(15) NOT NULL,
+	HorasUso TIME,
     FOREIGN KEY (IDCliente) REFERENCES Pessoa (ID),
     TipoEntidade AS 'Cliente' PERSISTED 
 );
+
 CREATE TABLE Funcionario (
-    IDFuncionario INT PRIMARY KEY,
-    Cargo VARCHAR(50),
-    DataContratacao DATE,
-    Salario MONEY,
+    IDFuncionario INT NOT NULL PRIMARY KEY ,
+    Cargo VARCHAR(50) NOT NULL,
+    DataContratacao DATE NOT NULL,
+    Salario DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (IDFuncionario) REFERENCES Pessoa (ID),
     TipoEntidade AS 'Funcionario' PERSISTED 
 );
