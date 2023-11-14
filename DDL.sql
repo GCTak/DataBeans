@@ -107,6 +107,7 @@ CREATE TABLE NotaFiscal (
     Desconto DECIMAL(5, 2),
     TributosTotaisIncidentes DECIMAL(10,2),
     FormaPagamento VARCHAR(50),
+    Troco DECIMAL(10,2),
     ValorTotal DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
     FOREIGN KEY (IDRegistroUso) REFERENCES RegistroDeUso(IDRegistroUso),
