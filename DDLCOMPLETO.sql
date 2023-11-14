@@ -1,5 +1,5 @@
 CREATE TABLE Pessoa (
-    ID INT IDENTITY(1,1) PRIMARY KEY,
+    ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Nome VARCHAR(150) NOT NULL,
     DataNascimento DATE,
     Endereco VARCHAR(300),
@@ -9,23 +9,22 @@ CREATE TABLE Pessoa (
 );
 
 CREATE TABLE Cliente (
-    IDCliente INT PRIMARY KEY,
-    -- Colunas específicas de Cliente
+    IDCliente INT NOT NULL PRIMARY KEY,
     FOREIGN KEY (IDCliente) REFERENCES Pessoa (ID),
     TipoEntidade AS 'Cliente' PERSISTED 
 );
 
 CREATE TABLE Funcionario (
-    IDFuncionario INT PRIMARY KEY,
-    Cargo VARCHAR(50),
-    DataContratacao DATE,
-    Salario MONEY,
+    IDFuncionario INT NOT NULL PRIMARY KEY ,
+    Cargo VARCHAR(50) NOT NULL,
+    DataContratacao DATE NOT NULL,
+    Salario DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (IDFuncionario) REFERENCES Pessoa (ID),
     TipoEntidade AS 'Funcionario' PERSISTED 
 );
 
 CREATE TABLE Maquina (
-    IDMaquina INT IDENTITY(1,1) PRIMARY KEY,
+    IDMaquina INT IDENTITY(1,1) NOT NULL PRIMARY KEY ,
     NumeroSerie CHAR(7),
     Estado VARCHAR(30),
     Tipo VARCHAR(30),
@@ -35,9 +34,9 @@ CREATE TABLE Maquina (
 );
 
 CREATE TABLE Reserva (
-    IDReserva INT IDENTITY(1,1) PRIMARY KEY,
+    IDReserva INT IDENTITY(1,1)NOT NULL PRIMARY KEY ,
     IDCliente INT NOT NULL,
-    IDMaquina INT NULL,
+    IDMaquina INT NOT NULL,
     Horario DATETIME2 NOT NULL,
 	TempoDeReserva TIME NOT NULL,
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
@@ -45,7 +44,7 @@ CREATE TABLE Reserva (
 );
 
 CREATE TABLE RegistroDeUso (
-    IDRegistroUso INT IDENTITY(1,1) PRIMARY KEY,
+    IDRegistroUso INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     IDCliente INT NOT NULL,
     IDMaquina INT NOT NULL,
     DataHoraInicio DATETIME2 NOT NULL,
@@ -59,20 +58,20 @@ CREATE TABLE Lanchonete (
     IDItemLanchonete INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
     Preco DECIMAL(10, 2) NOT NULL,
-    Quantidade INT
+    Quantidade INT NOT NULL
 );
 
 CREATE TABLE Manutencao (
-    IDManutencao INT IDENTITY(1,1) PRIMARY KEY,
+    IDManutencao INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     IDMaquina INT NOT NULL,
     DataManutencao DATE NOT NULL,
     Descricao VARCHAR(100),
-    Estado BIT,
+    Estado BIT NOT NULL,
     FOREIGN KEY (IDMaquina) REFERENCES Maquina(IDMaquina)
 );
 
 CREATE TABLE ServicoAdicional (
-    IDServicoAdicional INT IDENTITY(1,1) PRIMARY KEY,
+    IDServicoAdicional INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     Nome VARCHAR(150) NOT NULL,
     Preco DECIMAL(10, 2) NOT NULL,
     IDMaquina INT NOT NULL,
@@ -123,9 +122,11 @@ CREATE TABLE NotaFiscal (
     IDServicoAdicional INT,
     ValorTotalServicoAdicional DECIMAL(10,2),
     IDComanda INT,
+	QuantidadeDeItens INT,
     ValorTotalComanda DECIMAL(10,2),
     IDFuncionario INT NOT NULL,
-    Desconto DECIMAL(5, 2) NULL,
+    Desconto DECIMAL(5, 2),
+	TributosTotaisIncidentes DECIMAL(10,2),
     FormaPagamento VARCHAR(50),
     ValorTotal DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
