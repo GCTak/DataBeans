@@ -30,7 +30,8 @@ Ao seguir esta ordem de execução, você garantirá que as relações entre as 
 
 **OBSERVAÇÃO**
    Caso prefira pular os passos 2 e 3 execute o  arquivo DDLCOMPLETO.
-
+## 3º Momento
+Para o 3º Momento criamos um cursor para facilitar a nossa busca em uma procedure, e ainda fizemos uma aplicação com o ADO.NET.
 ## Requisitos
 
 Para executar este projeto, você precisará atender aos seguintes requisitos:
